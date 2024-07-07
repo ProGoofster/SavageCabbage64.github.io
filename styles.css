@@ -1,46 +1,116 @@
-
 * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  /* Style the header */
-  .header {
-    background-color: #f1f1f1;
-    padding: 30px;
-    text-align: center;
-    font-size: 35px;
-  }
-  
-  /* Container for flexboxes */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(176, 238, 255);
+}
+
+/* Style the header */
+.header {
+  text-align: center;
+  border-style: none none solid none;
+  border-color: black;
+  padding: 15px 0px 15px 0px;
+  background-color: rgb(0, 183, 255);
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+.nav {
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+  padding: 0
+}
+
+.nav li {
+  display: inline-block;
+  padding-right: 5px;
+  padding-left: 5px
+}
+
+/* Container for flexboxes */
+.row {
+  display: -webkit-flex;
+  display: flex;
+}
+
+/* Create three equal columns that sits next to each other */
+.column {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 0;
+  margin: 15px;
+  border: 3px solid;
+  border-radius: 10px;
+  transition-duration: 0.3s;
+  background-color: rgb(238, 238, 238);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+}
+
+.column:hover {
+  background-color: white;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.column:active  {     
+  background-color: rgb(201, 201, 201);
+  transition-duration: 0.2s;   
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25),5px 5px 10px rgba(0, 0, 0, 0.25) inset;
+}
+.columnheader {
+  text-align: center;
+  border-style: none none solid none;
+  padding: 12px 0px 12px 0px;
+}
+
+.subrow {
+  display: -webkit-flex;
+  display: flex;
+}
+
+/* Create three equal columns that sits next to each other */
+.subcolumn {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 10px 20px 0px 30px;
+  height: 250px;
+  margin:0px;
+}
+
+.subcolumnheader {
+  text-align: center;
+  padding: 5px 0px 5px 0px;
+}
+
+.columnlist {
+  text-align: left;
+}
+
+/* Style the footer */
+.footer {
+  padding: 5px 0px 10px 0px;
+  text-align: center;
+  position: fixed;
+  font-size: 8px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+li{
+  padding-top: 10px;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
   .row {
-    display: -webkit-flex;
-    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
   }
-  
-  /* Create three equal columns that sits next to each other */
-  .column {
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    padding: 10px;
-    height: 300px; /* Should be removed. Only for demonstration */
-  }
-  
-  /* Style the footer */
-  .footer {
-    background-color: #f1f1f1;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-  @media (max-width: 400px) {
-    .row {
-      -webkit-flex-direction: column;
-      flex-direction: column;
-    }
-  }
+}

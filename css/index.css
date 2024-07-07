@@ -68,6 +68,12 @@ body {
   padding: 12px 0px 12px 0px;
 }
 
+.mapbutton {
+  color: black;
+  font-style: normal;
+  text-decoration: none;
+}
+
 .subrow {
   display: -webkit-flex;
   display: flex;
